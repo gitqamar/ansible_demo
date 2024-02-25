@@ -3,5 +3,7 @@
   tasks:
     - name: Will test the ping # task 1 is to ping all the hosts present under hosts: section.
       ansible.builtin.ping:
-#    - name: Reboot all the nodes # this task should reboot all the nodes that are part of [centos] group
-#      ansible.builtin.reboot:
+    - name: Reboot all the nodes # this task should reboot all the nodes that are part of [centos] group
+      ansible.builtin.reboot:
+      tags:
+        - never
