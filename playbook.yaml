@@ -1,0 +1,7 @@
+- name: Demonstrating the ansible modules # this is the task name
+  hosts: centos # here we're specifying the hosts group on which the task needs to be run
+  tasks:
+    - name: Will test the ping # task 1 is to ping all the hosts present under hosts: section.
+      ansible.builtin.ping:
+#    - name: Reboot all the nodes # this task should reboot all the nodes that are part of [centos] group
+#      ansible.builtin.reboot:
